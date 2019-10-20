@@ -31,8 +31,10 @@ jobs:
         ls -al
         echo $MY_VAR $FIRST_NAME $LAST_NAME.
 
-    - name: Check out code into the Go module directory
+    - name: Check out code
       uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
 
     - name: Use scripit file
       run: |
