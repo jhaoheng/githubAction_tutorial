@@ -1,0 +1,35 @@
+name: golang
+
+on: 
+  push:
+    branches:
+      - master
+    paths:
+      - 'golang/*'
+      - '.github/workflows/myWorkflow_golang.yml'
+
+jobs:
+  my-job:
+    name: MyJob-Golang-test
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: check env
+      run: |
+        ls -al
+        export -p
+        go version
+
+    - name: Set up Go 1.13
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.13
+      id: go
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v1
+
+    - name: Go Test
+      run: | 
+        ls -al
+        go test -v -cover ./golang/

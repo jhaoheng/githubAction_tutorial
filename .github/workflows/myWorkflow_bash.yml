@@ -1,0 +1,43 @@
+name: bash
+
+on: 
+  push:
+    branches:
+      - master
+    paths:
+      - 'bash/*'
+      - '.github/workflows/myWorkflow_bash.yml'
+
+jobs:
+  my-job:
+    name: MyJob-script-test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Use cmd
+      run: |
+        which git
+        pwd
+        echo "hello world" > hello.world
+        ls -al
+        export -p
+        uname -a
+
+    - name: Use environment variables
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Max
+        LAST_NAME: HU
+      run: |
+        ls -al
+        echo $MY_VAR $FIRST_NAME $LAST_NAME.
+
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v1
+
+    - name: Use scripit file
+      run: |
+        pwd
+        ls -al
+        sh bash/hello.sh
+        echo $RUNNER_TRACKING_ID
+    

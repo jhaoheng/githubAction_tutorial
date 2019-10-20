@@ -1,0 +1,39 @@
+name: docker
+
+on: 
+  push:
+    branches:
+      - master
+    paths:
+      - 'docker/*'
+      - '.github/workflows/myWorkflow_Docker.yml'
+
+jobs:
+  my-job:
+    name: MyJob-Docker-test
+    runs-on: ubuntu-latest
+    steps:
+    - name: check
+      run: |
+        pwd
+        ls -al
+        export -p
+        go version
+        uname -a
+
+    - name: Hello world action step
+      id: hello
+      uses: jhaoheng/testgithubaction/docker@master
+      with:
+        who-to-greet: 'Mona the Octocat'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    
+  
+    - name: check
+      run: |
+        pwd
+        ls -al
+        export -p
+        go version
