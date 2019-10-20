@@ -7,6 +7,7 @@ on:
     paths:
       - 'coverage/*'
       - '.github/workflows/myWorkflow_coverage.yml'
+      - '!coverage/readme.md'
 
 jobs:
   test:
