@@ -23,7 +23,7 @@ jobs:
 
     - name: Hello world action step
       id: hello
-      uses: jhaoheng/testgithubaction/docker@master
+      uses: jhaoheng/githubAction_training/docker@master
       with:
         who-to-greet: 'Mona the Octocat'
     # Use the output from the `hello` step
