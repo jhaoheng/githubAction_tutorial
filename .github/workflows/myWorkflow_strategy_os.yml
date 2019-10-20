@@ -1,0 +1,27 @@
+name: bash
+
+runs-on: ${{ matrix.os }}
+strategy:
+  matrix:
+    os: [ubuntu-16.04, ubuntu-18.04]
+
+on: 
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/myWorkflow_strategy_os.yml'
+
+jobs:
+  my-job:
+    name: MyJob-script-test
+    steps:
+    - name: Use cmd
+      run: |
+        which git
+        pwd
+        echo "hello world" > hello.world
+        ls -al
+        export -p
+        uname -a
+    
