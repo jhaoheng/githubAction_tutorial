@@ -19,4 +19,4 @@
 
 ![img](./image.png)
 
-[![codecov](https://codecov.io/gh/jhaoheng/testGithubAction/branch/master/graph/badge.svg?token=nKTctBhgGJ)](https://codecov.io/gh/jhaoheng/testGithubAction)
+[![codecov](https://codecov.io/gh/jhaoheng/githubAction_training/branch/master/graph/badge.svg)](https://codecov.io/gh/jhaoheng/githubAction_training)

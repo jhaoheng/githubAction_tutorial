@@ -6,13 +6,13 @@
 
 > 根據 ./github/workflows/...yml
 
-[![Actions Status](https://github.com/jhaoheng/testGithubAction/workflows/bash/badge.svg)](https://github.com/jhaoheng/testGithubAction/actions)
+[![Actions Status](https://github.com/jhaoheng/githubAction_training/workflows/bash/badge.svg)](https://github.com/jhaoheng/githubAction_training/actions)
 
-[![Actions Status](https://github.com/jhaoheng/testGithubAction/workflows/golang/badge.svg)](https://github.com/jhaoheng/testGithubAction/actions)
+[![Actions Status](https://github.com/jhaoheng/githubAction_training/workflows/golang/badge.svg)](https://github.com/jhaoheng/githubAction_training/actions)
 
-[![Actions Status](https://github.com/jhaoheng/testGithubAction/workflows/docker/badge.svg)](https://github.com/jhaoheng/testGithubAction/actions)
+[![Actions Status](https://github.com/jhaoheng/githubAction_training/workflows/docker/badge.svg)](https://github.com/jhaoheng/githubAction_training/actions)
 
-[![Actions Status](https://github.com/jhaoheng/testGithubAction/workflows/coverage/badge.svg)](https://github.com/jhaoheng/testGithubAction/actions)
+[![Actions Status](https://github.com/jhaoheng/githubAction_training/workflows/coverage/badge.svg)](https://github.com/jhaoheng/githubAction_training/actions)
 
 # Workflow syntax for GitHub Actions
 > https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idsteps
