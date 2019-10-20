@@ -1,3 +1,6 @@
+
+[![codecov](https://codecov.io/gh/jhaoheng/githubAction_training/branch/master/graph/badge.svg)](https://codecov.io/gh/jhaoheng/githubAction_training)
+
 # 使用 
 
 1. https://codecov.io, 註冊/登入
@@ -18,5 +21,3 @@
 2. 可至 codecov->repo->Settings->Badge 中取得
 
 ![img](./image.png)
-
-[![codecov](https://codecov.io/gh/jhaoheng/githubAction_training/branch/master/graph/badge.svg)](https://codecov.io/gh/jhaoheng/githubAction_training)
