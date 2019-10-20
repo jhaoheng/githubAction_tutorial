@@ -16,3 +16,7 @@ on:
 
 1. 設定 golang 版本
 2. git fetch source code
+
+# need to do
+
+- [ ]: go release, https://goreleaser.com 
