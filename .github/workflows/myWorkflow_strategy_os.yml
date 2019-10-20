@@ -1,9 +1,4 @@
-name: bash
-
-runs-on: ${{ matrix.os }}
-strategy:
-  matrix:
-    os: [ubuntu-16.04, ubuntu-18.04]
+name: strategy_matrix_os
 
 on: 
   push:
@@ -14,7 +9,11 @@ on:
 
 jobs:
   my-job:
-    name: MyJob-script-test
+    name: MyJob-test
+    strategy:
+      matrix:
+        os: [ubuntu-16.04, ubuntu-18.04]
+    runs-on: ${{ matrix.os }}
     steps:
     - name: Use cmd
       run: |
