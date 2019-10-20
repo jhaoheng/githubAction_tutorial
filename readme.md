@@ -30,3 +30,44 @@
 - name: Check out code into the Go module directory
     uses: actions/checkout@v1
 ```
+
+# 關於建立自己的 action 與 如何參考 action
+
+## [about Action](https://help.github.com/en/articles/about-actions#types-of-actions)
+
+## [Referencing actions in your workflow](https://help.github.com/en/articles/configuring-a-workflow#referencing-actions-in-your-workflow)
+
+- 建議在 repo 的設計結構如下
+
+```
+|-- hello-world (repository)
+|   |__ .github
+|       └── workflows
+|           └── my-first-workflow.yml
+|       └── actions
+|           |__ hello-world-action
+|               └── action.yml
+```
+
+```
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - uses: actions/checkout@v1
+      # This step references the directory that contains the action.
+      - uses: ./.github/actions/hello-world-action
+```
+
+## [Referencing a container on Docker Hub](https://help.github.com/en/articles/configuring-a-workflow#referencing-a-container-on-docker-hub)
+
+> 關鍵字 : `docker://{image}:{tag}`
+
+```
+jobs:
+  my_first_job:
+    steps:
+      - name: My first step
+        uses: docker://alpine:3.8
+```
