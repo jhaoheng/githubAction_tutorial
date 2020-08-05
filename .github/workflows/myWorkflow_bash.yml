@@ -10,8 +10,8 @@ on:
       - '!bash/readme.md'
 
 jobs:
-  my-job:
-    name: MyJob-script-test
+  my-job-bash:
+    name: MyJob-script
     runs-on: ubuntu-latest
     steps:
     - name: Use cmd

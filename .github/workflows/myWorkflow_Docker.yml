@@ -10,8 +10,8 @@ on:
       - '!docker/readme.md'
 
 jobs:
-  my-job:
-    name: MyJob-Docker-test
+  my-job-docker:
+    name: MyJob-Docker
     runs-on: ubuntu-latest
     steps:
     - name: check

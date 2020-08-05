@@ -10,8 +10,8 @@ on:
       - '!golang/readme.md'
 
 jobs:
-  my-job:
-    name: MyJob-Golang-test
+  my-job-golang:
+    name: MyJob-Golang
     runs-on: ubuntu-latest
     steps:
 

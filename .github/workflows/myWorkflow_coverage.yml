@@ -10,8 +10,8 @@ on:
       - '!coverage/readme.md'
 
 jobs:
-  test:
-    name: Test
+  my-job-coverage:
+    name: coverage
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go
