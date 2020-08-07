@@ -8,20 +8,10 @@
 
 [![Actions Status](https://github.com/jhaoheng/githubAction_training/workflows/coverage/badge.svg)](https://github.com/jhaoheng/githubAction_training/actions)
 
-# operation flow
+# general
 
-event trigger -> virtual machine -> clone source code -> do something
-
-## 取得 repo source code
-
-- 在 github action 的 virtual machine 中, 是空的 instance, 需要透過 git 下載 source code
-- 可以使用已經建立好的 action 透過 checkout 來獲取 repo 的 source code
-    - https://github.com/actions/checkout
-
-```
-- name: Check out code into the Go module directory
-    uses: actions/checkout@v1
-```
+- flow : `event trigger -> virtual machine -> clone source code -> do something`
+- price : `https://github.com/features/actions#pricing-details`
 
 # folder 結構
 
@@ -35,6 +25,8 @@ event trigger -> virtual machine -> clone source code -> do something
 |               └── action.yml
 ```
 
+## ex : base example
+
 ```
 jobs:
   build:
@@ -46,6 +38,16 @@ jobs:
       - uses: ./.github/actions/hello-world-action
 ```
 
+## ex : action, 取得 repo source code
+
+- 在 github action 的 virtual machine 中, 是空的 instance, 需要透過 git 下載 source code
+- 可以使用已經建立好的 action 透過 checkout 來獲取 repo 的 source code
+    - https://github.com/actions/checkout
+
+```
+- name: Check out code into the Go module directory
+    uses: actions/checkout@v1
+```
 
 # Q
 - [所有標籤使用方法](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
